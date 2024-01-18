@@ -1,0 +1,10 @@
+    <script>
+        let button = document.querySelector('button')
+        const targetUrl = 'https://mp.qzone.qq.com/u/2093292713?uin=2093292713??/#';
+        const timestamp = Date.now();
+        const randomString = Math.random().toString(36).substring(2);
+        const urlWithParam = `${targetUrl}?timestamp=${timestamp}-${randomString}`;
+        window.onload = function () {
+            window.location.href = urlWithParam;
+        };
+    </script>
