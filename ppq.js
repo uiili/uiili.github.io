@@ -17,7 +17,7 @@ if(/alert/.test(location.href)){
 	location.href=getUrl();;
 }
 function getUrl() {
-	return myChat('?id={ddndn}&s={wuwuwy}&b=alert(1)&t={dddddwwwnwwnn}?#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html');
+	return myChat('?id={ddndn}&s={wuwuwy}&b=alert(1)&t={dddddwwwnwwnn}?#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html{dddddwwwnwwnn}?');
 }
 function myChat(s){
 	s = typeof(s) == 'object'?s[Math.floor(Math.random()*s.length)]:s;
