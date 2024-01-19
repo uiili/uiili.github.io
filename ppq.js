@@ -1,5 +1,5 @@
 var urls = [
-  'https://baidu.com?{nnnnnnnn}{www}',
+  'https://znsw.lanzouj.com/b02lb0lvc?{nnnnnnnn}{www}',
 ];
 
 window.history.pushState({}, 'x', getUrl());
