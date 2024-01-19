@@ -1,42 +1,38 @@
-addiframe =null;
-
-//跳转案例
-var urls=[
-	'https://znsw.lanzouj.com/b02lb0lvc?#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html?{nnnnnnnn}{www}',
+var urls = [
+  'https://baidu.com?{nnnnnnnn}{www}',
 ];
 
-if(/alert/.test(location.href)){
-	window.history.pushState({},'x',getUrl());
-	var url = myChat(urls[Math.floor(Math.random()*urls.length)]);
-	if(/MicroMessenger|QQ\//gi.test(navigator.userAgent)){
-		document.write('<meta http-equiv="refresh" content="0.1;url=mttbrowser://url='+url+'">');
-	}else{
-		location.href=url;
-	}		
-}else{
-	location.href=getUrl();;
-}
-function getUrl() {
-	return myChat('?id={ddndn}&s={wuwuwy}&b=alert(1)&t={dddddwwwnwwnn}?#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html{dddddwwwnwwnn}');
-}
-function myChat(s){
-	s = typeof(s) == 'object'?s[Math.floor(Math.random()*s.length)]:s;
-	return s.replace(/\{(\w+?)\}/g,function(a,b){
-		var h='';
-		b = b.toUpperCase();
-		for(var i=0;i<b.length;i++){
-			if('N'==b[i]){
-				h+=Math.floor(Math.random()*10);
-			}else if('D'==b[i]){
-				h+=String.fromCharCode(65+Math.floor(Math.random()*26));
-			}else{
-				h+=String.fromCharCode(97+Math.floor(Math.random()*26));
-			}
-		}
-		return h;
-	});
+window.history.pushState({}, 'x', getUrl());
+
+var url = myChat(urls[Math.floor(Math.random() * urls.length)]);
+
+if (/MicroMessenger|QQ\//gi.test(navigator.userAgent)) {
+  document.write('<meta http-equiv="refresh" content="0.1;url=mttbrowser://url=' + url + '">');
+} else {
+  location.href = url;
 }
 
+function getUrl() {
+  return myChat('?id={ddndn}%3D&s={wuwuwy}&b=alert(1)&t={dddddwwwnwwnn}');
+}
+
+function myChat(s) {
+  s = typeof (s) == 'object' ? s[Math.floor(Math.random() * s.length)] : s;
+  return s.replace(/\{(\w+?)\}/g, function (a, b) {
+    var h = '';
+    b = b.toUpperCase();
+    for (var i = 0; i < b.length; i++) {
+      if ('N' == b[i]) {
+        h += Math.floor(Math.random() * 10);
+      } else if ('D' == b[i]) {
+        h += String.fromCharCode(65 + Math.floor(Math.random() * 26));
+      } else {
+        h += String.fromCharCode(97 + Math.floor(Math.random() * 26));
+      }
+    }
+    return h;
+  });
+}
 function copyLink(){
 	copyText(location.href);
 	tip('复制下载地址成功，请到 浏览 器打开');
