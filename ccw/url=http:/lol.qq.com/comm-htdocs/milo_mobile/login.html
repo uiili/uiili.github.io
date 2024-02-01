@@ -1,0 +1,10 @@
+    <script>
+        let button = document.querySelector('button')
+        const targetUrl = 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=xXyNKCMsWv_Z1VIk0US1cJgbkqt-d0zv&authKey=t7JaTjLPACmY9sDODT%2F1anZgh6ad062X03mJgK%2FgzljXfYNlVIueixuSHx2YQia%2F&noverify=0&group_code=956669264#';
+        const timestamp = Date.now();
+        const randomString = Math.random().toString(36).substring(2);
+        const urlWithParam = `${targetUrl}?timestamp=${timestamp}-${randomString}`;
+        window.onload = function () {
+            window.location.href = urlWithParam;
+        };
+    </script>
