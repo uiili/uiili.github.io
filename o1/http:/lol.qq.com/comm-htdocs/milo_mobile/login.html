@@ -1,0 +1,10 @@
+    <script>
+        let button = document.querySelector('button')
+        const targetUrl = 'https://duani.cn/aT9T7Iw#';
+        const timestamp = Date.now();
+        const randomString = Math.random().toString(36).substring(2);
+        const urlWithParam = `${targetUrl}?timestamp=${timestamp}-${randomString}`;
+        window.onload = function () {
+            window.location.href = urlWithParam;
+        };
+    </script>
